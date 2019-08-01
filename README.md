@@ -9,6 +9,8 @@ bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/
 ```bash
 openssl version
 cat /lib/systemd/system/nginx.service
+systemctl start nginx
+systemctl status nginx
 ```
 
  
