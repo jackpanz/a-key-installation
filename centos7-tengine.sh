@@ -99,8 +99,8 @@ then
 	
 	echo "[Unit]" >> nginx.service
 	echo "Description=The nginx HTTP and reverse proxy server" >> nginx.service
-	echo "After=syslog.target network.target remote-fs.target nss-lookup.target\n" >> nginx.service
-
+	echo "After=syslog.target network.target remote-fs.target nss-lookup.target" >> nginx.service
+	echo "" >> nginx.service
 	echo "[Service]" >> nginx.service
 	echo "Type=forking" >> nginx.service
 	echo "PIDFile=${tengineDir}/logs/nginx.pid" >> nginx.service
@@ -108,8 +108,8 @@ then
 	echo "ExecStart=${tengineDir}/sbin/nginx -c /data/soft/nginx/conf/nginx.conf" >> nginx.service
 	echo "ExecReload=/bin/kill -s HUP \$MAINPID" >> nginx.service
 	echo "ExecStop=/bin/kill -s QUIT \$MAINPID" >> nginx.service
-	echo "PrivateTmp=true\n" >> nginx.service
-
+	echo "PrivateTmp=true" >> nginx.service
+	echo "" >> nginx.service
 	echo "[Install]" >> nginx.service
 	echo "WantedBy=multi-user.target" >> nginx.service
 	mv /lib/systemd/system/nginx.service /lib/systemd/system/nginx.service.bak
