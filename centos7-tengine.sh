@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 tengineUrl="http://tengine.taobao.org/download/tengine-2.3.1.tar.gz"
 tengineversion="tengine-2.3.1"
 opensslUrl="https://www.openssl.org/source/openssl-1.1.1c.tar.gz"
@@ -53,7 +53,7 @@ then
 	exit 1;
 fi
 
-yum -y install wget gcc gcc-c++ pcre-devel zlib-devel openssl openssl-devel
+yum -y install wget gcc gcc-c++ perl-core pcre-devel zlib-devel openssl openssl-devel
 mkdir ./workdir
 cd workdir
 
