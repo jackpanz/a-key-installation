@@ -8,7 +8,7 @@ tomcatDir="/usr/local/tomcat9"
 tomcatAuto="n"
 
 jdkInstall="n"
-jdkUrl="https://game-site.oss-cn-shenzhen.aliyuncs.com/jdk1.8.0_161.tar.gz"
+jdkUrl="https://jack-hk-oss.oss-cn-hongkong.aliyuncs.com/jdk1.8.0_161.tar.gz"
 #jdkUrl="http://192.168.56.1/jdk1.8.0_161.tar.gz"
 jdkName="jdk1.8.0_161"
 jdkDir="/usr/local/jdk8"
