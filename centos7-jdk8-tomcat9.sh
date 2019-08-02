@@ -68,6 +68,10 @@ if [ -z "$confirm" ] || [ ${confirm} != "y" ]; then
 	exit 1;
 fi
 
+yum install rng-tools -y
+systemctl enable rngd
+systemctl start rngd
+
 if [ ! -d "./workdir" ]; then
 mkdir ./workdir
 fi
