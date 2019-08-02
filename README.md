@@ -9,7 +9,6 @@ bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/
 ```bash
 openssl version
 cat /lib/systemd/system/nginx.service
-systemctl start nginx
 systemctl status nginx
 ```
 
@@ -26,5 +25,6 @@ cat /etc/profile
 cat /lib/systemd/system/tomcat.service
 head /data/soft/tomcat9/bin/catalina.sh -n 120
 echo $JAVA_HOME
+systemctl status tomcat
 ```
  
