@@ -18,7 +18,7 @@ systemctl status nginx
 bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/master/centos7-jdk8-tomcat9.sh)
 ```
 
-安装完后需要重启后才能生效
+安装后需要重启或source /etc/profile才能生效
 
 测试
 ```bash
