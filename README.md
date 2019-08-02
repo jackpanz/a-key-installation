@@ -20,9 +20,7 @@ bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/
 
 测试
 ```bash
-openssl version
-cat /lib/systemd/system/nginx.service
-systemctl start nginx
-systemctl status nginx
+cat /etc/profile
+echo $JAVA_HOME
 ```
  
