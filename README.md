@@ -18,9 +18,13 @@ systemctl status nginx
 bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/master/centos7-jdk8-tomcat9.sh)
 ```
 
+安装完后需要重启后才能生效
+
 测试
 ```bash
 cat /etc/profile
+cat /lib/systemd/system/tomcat.service
+head /data/soft/tomcat9/bin/catalina.sh -n 120
 echo $JAVA_HOME
 ```
  
