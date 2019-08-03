@@ -16,8 +16,8 @@ filename=`date +%Y%m%d`
 zip /root/mysql_bk/${filename}.zip /root/mysql_bk/${filename}.sql
 #删除sql
 rm -f /root/mysql_bk/${filename}.sql
-#上传到oss,如果不用只保存到本地
-ossutil64 cp -r /root/mysql_bk/${filename}.zip oss://jack-hk-oss/hongbaodb/ -f -e EndPoint -i AccessKeyId -k AccessKeySecret
+#上传到oss,如果不用只保存到本地,ossutil64写全路径
+/usr/local/bin/ossutil64 cp -r /root/mysql_bk/${filename}.zip oss://jack-hk-oss/hongbaodb/ -f -e EndPoint -i AccessKeyId -k AccessKeySecret
 ```
 
 开机启动
@@ -25,10 +25,14 @@ ossutil64 cp -r /root/mysql_bk/${filename}.zip oss://jack-hk-oss/hongbaodb/ -f -
 yum -y install vixie-cron crontabs
 systemctl start crond
 
+#编程触发时间,以及导入日志
 crontab -e
-00 03 * * * source /root/autobackupmysql.sh
+00 03 * * * source /root/autobackupmysql.sh >> /root/backup.log 2>&1
+systemctl restart crond
 
 chkconfig --level 345 crond on
 systemctl enable crond
+
+#修改后可以，重启crond
 systemctl restart crond
 ```
