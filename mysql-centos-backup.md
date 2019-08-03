@@ -1,8 +1,13 @@
 # 自动备份mysql
 
+```bash
 备份脚步
 /data/autobackupmysql.sh
+备份文件存放目录
 /root/mysql_bk
+```
+
+保存一下命令道autobackupmysql.sh
 ```bash
 filename=`date +%Y%m%d`
 #导出备份sql
@@ -15,5 +20,15 @@ rm -f /root/mysql_bk/${filename}.sql
 ossutil64 cp -r /root/mysql_bk/${filename}.zip oss://jack-hk-oss/hongbaodb/
 ```
 
-
+开机启动
+```bash
 yum -y install vixie-cron crontabs
+systemctl start crond
+
+crontab -e
+00 03 * * * source /root/autobackupmysql.sh
+
+chkconfig --level 345 crond on
+systemctl enable crond
+systemctl restart crond
+```
