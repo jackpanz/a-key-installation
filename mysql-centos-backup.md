@@ -23,16 +23,15 @@ rm -f /root/mysql_bk/${filename}.sql
 开机启动
 ```bash
 yum -y install vixie-cron crontabs
+chkconfig --level 345 crond on
+systemctl enable crond
 systemctl start crond
 
 #触发时间,导出日志
 crontab -e
 00 03 * * * source /root/autobackupmysql.sh >> /root/backup.log 2>&1
-systemctl restart crond
-
-chkconfig --level 345 crond on
-systemctl enable crond
+systemctl reload crond
 
 #修改触发时间，重启crond
-systemctl restart crond
+systemctl reload crond
 ```
