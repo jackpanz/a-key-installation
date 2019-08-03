@@ -9,11 +9,11 @@ mv ossutil64 /usr/local/bin/
 ```bash
 ./ossutil64 config
 ```
-config-file:不用输入
-endpoint：oss-cn-hongkong-internal.aliyuncs.com
-accessKeyID：AccessKeyID 
-accessKeySecret：AccessKeySecret
-stsToken:不用输入
+- config-file:不用输入
+- endpoint：oss-cn-hongkong-internal.aliyuncs.com
+- accessKeyID：AccessKeyID 
+- accessKeySecret：AccessKeySecret
+- stsToken:不用输入
 
 上传
 ```bash
