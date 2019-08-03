@@ -1,5 +1,9 @@
 # 自动备份mysql
 
+备份脚步
+/data/autobackupmysql.sh
+/root/mysql_bk
+```bash
 filename=`date +%Y%m%d`
 #导出备份sql
 /usr/bin/mysqldump --default-character-set=utf8mb4 -uroot -p123456 rob-red-packet  >>/root/mysql_bk/${filename}.sql
@@ -9,7 +13,7 @@ zip /root/mysql_bk/${filename}.zip /root/mysql_bk/${filename}.sql
 rm -f /root/mysql_bk/${filename}.sql
 #上传到oss,如果不用只保存到本地
 ossutil64 cp -r /root/mysql_bk/${filename}.zip oss://jack-hk-oss/hongbaodb/
-
+```
 
 
 yum -y install vixie-cron crontabs
