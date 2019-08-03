@@ -30,8 +30,6 @@ systemctl start crond
 #触发时间,导出日志
 crontab -e
 00 03 * * * source /root/autobackupmysql.sh >> /root/backup.log 2>&1
-systemctl reload crond
-
-#修改触发时间，重启crond
+#修改触发条件，重启crond
 systemctl reload crond
 ```
