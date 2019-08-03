@@ -3,7 +3,7 @@
 ```bash
 wget http://gosspublic.alicdn.com/ossutil/1.5.2/ossutil64
 chmod 755 ossutil64
-mv ossutil64 /usr/sbin/
+mv ossutil64 /usr/local/bin/
 ```
 
 配置
@@ -12,11 +12,12 @@ mv ossutil64 /usr/sbin/
 ```
 config-file:不用输入
 endpoint：oss-cn-hongkong-internal.aliyuncs.com
-accessKeyID：yourAccessKeyID 
-accessKeySecret：yourAccessKeySecret
+accessKeyID：AccessKeyID 
+accessKeySecret：AccessKeySecret
 stsToken:不用输入
 
 上传
 ```bash
 ossutil64 cp -r  ss-go.sh oss://ossname/hongbaodb/
+ossutil64 cp -r demo.zip oss://ossname/ -f -e EndPoint -i AccessKeyId -k AccessKeySecret
 ```
