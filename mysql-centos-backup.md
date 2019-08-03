@@ -7,7 +7,7 @@
 /root/mysql_bk
 ```
 
-保存一下命令道autobackupmysql.sh
+保存以一下命令到autobackupmysql.sh
 ```bash
 filename=`date +%Y%m%d`
 #导出备份sql
