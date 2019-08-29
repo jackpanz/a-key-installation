@@ -1,6 +1,6 @@
 # a-key-installation
 
-## 安装nginx
+## centos7安装nginx
 ```bash
 bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/master/centos7-tengine.sh)
 ```
@@ -12,7 +12,7 @@ cat /lib/systemd/system/nginx.service
 systemctl status nginx
 ```
 
-安装jdk8 tomcat9
+## centos7安装jdk8 tomcat9
 ```bash
 bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/master/centos7-jdk8-tomcat9.sh)
 ```
@@ -27,6 +27,8 @@ head /data/soft/tomcat9/bin/catalina.sh -n 120
 echo $JAVA_HOME
 systemctl status tomcat
 ```
-
-
+## centos7安装mysql5.7
+```bash
+bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/master/centos7-mysql5.7.sh)
+```
  
