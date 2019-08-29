@@ -1,6 +1,6 @@
 # a-key-installation
 
-安装nginx
+## 安装nginx
 ```bash
 bash <(curl -L -s https://raw.githubusercontent.com/jackpanz/a-key-installation/master/centos7-tengine.sh)
 ```
@@ -27,4 +27,6 @@ head /data/soft/tomcat9/bin/catalina.sh -n 120
 echo $JAVA_HOME
 systemctl status tomcat
 ```
+
+
  
