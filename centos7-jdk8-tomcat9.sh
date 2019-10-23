@@ -1,8 +1,8 @@
 #!/bin/bash
 tomcatInstall="n"
-tomcatUrl="https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.22/bin/apache-tomcat-9.0.22.tar.gz"
+tomcatUrl="https://jack-hk-oss.oss-cn-hongkong.aliyuncs.com/apache-tomcat-9.0.27.tar.gz"
 #tomcatUrl="http://192.168.56.1/apache-tomcat-9.0.22.tar.gz"
-tomcatName="apache-tomcat-9.0.22"
+tomcatName="apache-tomcat-9.0.27"
 tomcatDir="/usr/local/tomcat9"
 #tomcatDir="/data/soft/tomcat9"
 tomcatAuto="n"
