@@ -92,7 +92,7 @@ if [ ${jdkInstall} = "y" ]; then
 	echo "export JRE_HOME=${jdkDir}/jre" >> /etc/profile
 	echo "export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar:\$JRE_HOME/lib" >> /etc/profile
 
-	echo "export PATH=$JAVA_HOME/bin:\$JRE_HOME/bin:\$PATH" >> /etc/profile
+	echo "export PATH=\$JAVA_HOME/bin:\$JRE_HOME/bin:\$PATH" >> /etc/profile
 	echo "export JAVA_HOME CLASSPATH PATH JRE_HOME" >> /etc/profile
 	source /etc/profile
 	cd ..
