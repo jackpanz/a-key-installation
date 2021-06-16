@@ -1,8 +1,8 @@
 #!/bin/bash
 tengineUrl="http://tengine.taobao.org/download/tengine-2.3.3.tar.gz"
 tengineversion="tengine-2.3.3"
-opensslUrl="https://www.openssl.org/source/openssl-1.1.1c.tar.gz"
-opensslversion="openssl-1.1.1c"
+opensslUrl="https://www.openssl.org/source/openssl-1.1.1k.tar.gz"
+opensslversion="openssl-1.1.1k"
 tengineDirDef="/usr/local/nginx/"
 
 echo "Enter the tengine installation directory.(default /usr/local/nginx/)"
@@ -27,7 +27,7 @@ then
 	exit 1;
 fi
 
-echo "Is OpenSSL 1.1.1c installed?(y/n,default n)"
+echo "Is ${opensslversion} installed?(y/n,default n)"
 read sslInstall
 
 if [ -z "$sslInstall" ]
