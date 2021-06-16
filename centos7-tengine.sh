@@ -1,6 +1,6 @@
 #!/bin/bash
-tengineUrl="http://tengine.taobao.org/download/tengine-2.3.1.tar.gz"
-tengineversion="tengine-2.3.1"
+tengineUrl="http://tengine.taobao.org/download/tengine-2.3.3.tar.gz"
+tengineversion="tengine-2.3.3"
 opensslUrl="https://www.openssl.org/source/openssl-1.1.1c.tar.gz"
 opensslversion="openssl-1.1.1c"
 tengineDirDef="/usr/local/nginx/"
