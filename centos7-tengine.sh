@@ -105,7 +105,7 @@ then
 	echo "Type=forking" >> nginx.service
 	echo "PIDFile=${tengineDir}/logs/nginx.pid" >> nginx.service
 	echo "ExecStartPre=${tengineDir}/sbin/nginx -t" >> nginx.service
-	echo "ExecStart=${tengineDir}/sbin/nginx -c /data/soft/nginx/conf/nginx.conf" >> nginx.service
+	echo "ExecStart=${tengineDir}/sbin/nginx -c ${tengineDir}/conf/nginx.conf" >> nginx.service
 	echo "ExecReload=/bin/kill -s HUP \$MAINPID" >> nginx.service
 	echo "ExecStop=/bin/kill -s QUIT \$MAINPID" >> nginx.service
 	echo "PrivateTmp=true" >> nginx.service
